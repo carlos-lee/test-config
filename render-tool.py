@@ -4,6 +4,7 @@ import sys
 import yaml
 from jinja2 import Environment
 
+
 def render(template, values):
     with open(value, 'r') as f:
         value_obj = yaml.load(f.read())
@@ -13,8 +14,9 @@ def render(template, values):
     with open(template, 'w') as f:
         f.write(render_content.encode('utf-8'))
 
+
 if __name__ == '__main__':
-    template_file=sys.argv[0]
-    value_file=sys.argv[1]
+    template_file = sys.argv[1]
+    value_file = sys.argv[2]
     render(template_file, value_file)
-    pirnt "render %s: success!" % template_file
+    print "render %s: success!" % template_file
