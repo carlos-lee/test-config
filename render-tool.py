@@ -6,7 +6,7 @@ from jinja2 import Environment
 
 
 def render(template, values):
-    with open(value, 'r') as f:
+    with open(values, 'r') as f:
         value_obj = yaml.load(f.read())
     with open(template, 'r') as f:
         template_content = f.read()
