@@ -10,7 +10,7 @@ def render(template, values):
         value_obj = yaml.load(f.read())
     with open(template, 'r') as f:
         template_content = f.read()
-    render_content = Environment().from_string(file_content.encode('utf-8')).render(value_obj)
+    render_content = Environment().from_string(template_content.encode('utf-8')).render(value_obj)
     with open(template, 'w') as f:
         f.write(render_content.encode('utf-8'))
 
